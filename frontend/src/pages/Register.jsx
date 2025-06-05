@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import {
   Eye, EyeOff, Mail, Lock, User, CheckSquare, ArrowRight, Shield, Check
@@ -47,7 +47,6 @@ export default function TaskManagerRegister() {
       setError(err.response?.data?.error || 'Registration failed');
     }
   };
-
 
   const getPasswordStrength = () => {
     const password = form.password;
@@ -232,6 +231,16 @@ export default function TaskManagerRegister() {
               Register
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
+
+            {/* Login Link */}
+            <div className="text-center mt-4">
+              <p className="text-sm text-gray-600">
+                Already have an account?{' '}
+                <Link to="/login" className="text-purple-600 underline hover:text-purple-800">
+                  Click here to login
+                </Link>
+              </p>
+            </div>
           </form>
         </div>
       </div>
