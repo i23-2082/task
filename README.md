@@ -1,5 +1,8 @@
 Task Manager
+
 A full-stack Task Manager application built with a React frontend and a Node.js backend, designed to manage teams and tasks efficiently. This project allows users to create teams, add members, assign tasks, and track progress.
+
+
 Project Structure
 
 frontend/: Contains the React-based user interface.
